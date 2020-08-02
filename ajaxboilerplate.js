@@ -3,7 +3,7 @@ const url = 'https://api-to-call.com/endpoint';
 
 xhr.responseType = 'json';
 xhr.onreadystatechange = function() {
-  if (xhr.readyState === XMLHttpRequest.DONE) {
+  if (xhr.readyState === 4 && xhr.status === 200) {
     console.log(xhr.response);
   }
 };
